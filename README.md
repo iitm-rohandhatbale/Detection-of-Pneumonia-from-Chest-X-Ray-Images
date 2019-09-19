@@ -10,7 +10,6 @@ project file structure should be as following:
 Transfer-Learning
 | inception.model 
 | README.md
-| predict.py
 | transfer.py
 |__test_set
 |   |__NORMAL
@@ -34,3 +33,9 @@ Transfer-Learning
 |   |    ..
 |
 ```
+
+## Training Model
+
+1. Run python `transfer.py --nb_epoch 5 --batch_size 320 --plot --output_model_file filename.model`
+2. Replace `filename` of above command with your own model name.
+3. Later use the saved weights to predict any Image of cat or dog from the Internet or saved Images.
