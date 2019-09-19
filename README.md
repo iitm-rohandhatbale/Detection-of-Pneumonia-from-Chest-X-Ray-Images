@@ -1,52 +1,68 @@
-# Detection-of-Pneumonia-from-Chest-X-Ray-Images Using 'InceptionV3 model' and 'CNN model'  
+# Transfer-Learning
+Inception V3 for Transfer Learning on Cats and Dogs
 
-## Instructions:
+File to train the Inception v3 model on any dataset is added(```transfer.py```)
 
-To train "Inception v3" model for our own dataset follow the following instruction:
+I have added the weights file and the predict file(```predict.py```)
 
-project file structure should be as following:
+## Instructions to use the predict file:
 
+Recommended to use [**Anaconda 3**](https://repo.continuum.io/archive/Anaconda3-4.4.0-Linux-x86_64.sh)
+
+Dependencies:
+  1. Tensorflow = 1.2.1
+  2. Keras = 2+
+  
+Installing Tensorflow-cpu :
+```pip install tensorflow```
+
+Installing keras:
+```pip install keras```
+
+### Project file structure
 ```
 Transfer-Learning
 | inception.model 
 | README.md
+| predict.py
 | transfer.py
 |__test_set
-|   |__NORMAL
-|   |    normal01.jpg
-|   |    normal02.jpg
+|   |__cats
+|   |    cat01.jpg
+|   |    cat02.jpg
 |   |    ...
-|   |__PNEUMONIA
-|   |    pneumonia01.jpg
-|   |    pneumonia02.jpg
+|   |__dogs
+|   |    dog01.jpg
+|   |    dog02.jpg
 |   |    ..
 |
 |
 |__training_set
-|   |__NORMAL
-|   |    normal01.jpg
-|   |    normal02.jpg
+|   |__cats
+|   |    cat01.jpg
+|   |    cat02.jpg
 |   |    ...
-|   |__PNEUMONIA
-|   |    pneumonia01.jpg
-|   |    pneumonia02.jpg
+|   |__dogs
+|   |    dog01.jpg
+|   |    dog02.jpg
 |   |    ..
-|
-```
+ ```
 
-## Training Model
+### Operations with transfer.py
 
-1. Download pretrained "InceptionV3" model using this [link](https://github.com/DhavalThkkar/Transfer-Learning/raw/master/inception.model)
-2. Run python `transfer.py --nb_epoch 5 --batch_size 320 --plot --output_model_file filename.model`
-3. Replace `filename` of above command with your own model name.
-4. Later use the saved weights to predict any Image of cat or dog from the Internet or saved Images.
+1. Add the files in **training_set** and **test_set**
 
-## Predicting the class
+2. Run ```python transfer.py --nb_epoch 5 --batch_size 320 --plot --output_model_file filename.model ```
 
-1. Open Jupyter Notebook file `predict_class.ipynb` and use `predict` function to predict class
-2. In the `predict` function give image path and model name as `predict(img_path, model)`
+3. Later use the saved weights to predict any Image of cat or dog from the Internet or saved Images.
 
-## CNN Model
+### Operations for predict.py
 
-1. To use CNN model architecture run `Pneumonia_CNN.ipynb` jupyter notebook file. 
-2. Set the number of epochs by trial and error method.
+1. For Images saved locally
+```python predict.py --image imagename.jpg --model_name inception.model```
+
+
+2. For Images on the net
+```python predict.py --image_url www.imagename.jpg --model_name inception.model```
+
+
