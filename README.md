@@ -36,9 +36,10 @@ Transfer-Learning
 
 ## Training Model
 
-1. Run python `transfer.py --nb_epoch 5 --batch_size 320 --plot --output_model_file filename.model`
-2. Replace `filename` of above command with your own model name.
-3. Later use the saved weights to predict any Image of cat or dog from the Internet or saved Images.
+1. Download pretrained "InceptionV3" model using this [link](https://github.com/DhavalThkkar/Transfer-Learning/raw/master/inception.model)
+2. Run python `transfer.py --nb_epoch 5 --batch_size 320 --plot --output_model_file filename.model`
+3. Replace `filename` of above command with your own model name.
+4. Later use the saved weights to predict any Image of cat or dog from the Internet or saved Images.
 
 ## Predicting the class
 
