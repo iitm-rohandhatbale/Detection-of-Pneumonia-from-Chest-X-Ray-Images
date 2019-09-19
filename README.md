@@ -1,4 +1,4 @@
-# Detection-of-Pneumonia-from-Chest-X-Ray-Images
+# Detection-of-Pneumonia-from-Chest-X-Ray-Images Using 'InceptionV3 model' and 'CNN model'  
 
 ## Instructions:
 
@@ -44,3 +44,8 @@ Transfer-Learning
 
 1. Open Jupyter Notebook file `predict_class.ipynb` and use `predict` function to predict class
 2. In the `predict` function give image path and model name as `predict(img_path, model)`
+
+## CNN Model
+
+1. To use CNN model architecture run `Pneumonia_CNN.ipynb` jupyter notebook file. 
+2. Set the number of epochs by trial and error method.
