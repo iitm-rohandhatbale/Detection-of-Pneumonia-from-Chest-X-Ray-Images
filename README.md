@@ -1,5 +1,5 @@
 # Transfer-Learning
-Inception V3 for Transfer Learning on Cats and Dogs
+Inception V3 for Transfer Learning 
 
 File to train the Inception v3 model on any dataset is added(```transfer.py```)
 
@@ -27,24 +27,24 @@ Transfer-Learning
 | predict.py
 | transfer.py
 |__test_set
-|   |__cats
-|   |    cat01.jpg
-|   |    cat02.jpg
+|   |__Pneumonia
+|   |    Pneumonia01.jpg
+|   |    Pneumonia02.jpg
 |   |    ...
-|   |__dogs
-|   |    dog01.jpg
-|   |    dog02.jpg
+|   |__Normal
+|   |    Noraml01.jpg
+|   |    Normal02.jpg
 |   |    ..
 |
 |
 |__training_set
-|   |__cats
-|   |    cat01.jpg
-|   |    cat02.jpg
+|   |__Pneumonia
+|   |    Pneumonia01.jpg
+|   |    Pneumonia02.jpg
 |   |    ...
-|   |__dogs
-|   |    dog01.jpg
-|   |    dog02.jpg
+|   |__Normal
+|   |    Normal01.jpg
+|   |    Normal02.jpg
 |   |    ..
  ```
 
@@ -52,7 +52,7 @@ Transfer-Learning
 
 1. Add the files in **training_set** and **test_set**
 
-2. Run ```python transfer.py --nb_epoch 5 --batch_size 320 --plot --output_model_file filename.model ```
+2. Run ```python transfer.py --nb_epoch 500 --batch_size 320 --plot --output_model_file filename.model ```
 
 3. Later use the saved weights to predict any Image of cat or dog from the Internet or saved Images.
 
